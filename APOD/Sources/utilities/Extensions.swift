@@ -41,4 +41,19 @@ extension UIImageView {
 }
 
 
+extension UIView {
+    
+    @IBInspectable
+    var cornerRadiusView: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+        }
+    }
+    
+}
+
+
 

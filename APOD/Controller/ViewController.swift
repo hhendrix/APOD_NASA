@@ -21,18 +21,21 @@ class ViewController: UIViewController {
     
     
     var dataDetail:APODStruct?
+    private var dateCurrent = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //LoadingNasa.shared.showLoader()
+        self.getCurrentDate()
+        
+        let gestureRecognizerImage = UITapGestureRecognizer(target: self, action: #selector(selectImageForOpenAPod))
+        imageMail.addGestureRecognizer(gestureRecognizerImage)
+        imageMail.isUserInteractionEnabled = true
         
         self.getImageDay()
         
-        
-         let gestureRecognizerImage = UITapGestureRecognizer(target: self, action: #selector(selectImageForOpenAPod))
-        imageMail.addGestureRecognizer(gestureRecognizerImage)
         
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
@@ -50,13 +53,7 @@ class ViewController: UIViewController {
     
     
     func getImageDay(){
-        
-        let date = Date()
-        let format = DateFormatter()
-        format.dateFormat = "yyyy-MM-dd"
-        let formattedDate = format.string(from: date)
-        
-        ManagerAPOD.shared.getImageAPOD(fechaInicial: formattedDate, fechaFinal: formattedDate) { listApods in
+        ManagerAPOD.shared.getImageAPOD(fechaInicial: dateCurrent, fechaFinal: dateCurrent) { listApods in
             if let apodDay = listApods.first {
                 let deadlineTime = DispatchTime.now() + .seconds(1)
                 DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
@@ -70,6 +67,13 @@ class ViewController: UIViewController {
             }
         }
         
+    }
+    
+    func getCurrentDate(){
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        self.dateCurrent = format.string(from: date)
     }
     
     
@@ -89,11 +93,7 @@ class ViewController: UIViewController {
     }
     
     @objc func selectImageForOpenAPod(){
-        let date = Date()
-        let format = DateFormatter()
-        format.dateFormat = "yyyy-MM-dd"
-        let formattedDate = format.string(from: date)
-        performSegue(withIdentifier: "toDetailSegue", sender: formattedDate)
+        performSegue(withIdentifier: "toDetailSegue", sender: self.dateCurrent)
     }
     
     
@@ -105,7 +105,12 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailSegue" {
             if let destinationVC = segue.destination as? DetailViewController {
-                destinationVC.dateSelected = self.labelDate.text!
+                if self.labelDate.text != "" {
+                    destinationVC.dateSelected = self.labelDate.text!
+                }
+                else{
+                    destinationVC.dateSelected = self.dateCurrent
+                }
             }
         }
     }

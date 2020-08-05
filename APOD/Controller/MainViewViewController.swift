@@ -24,7 +24,19 @@ class MainViewViewController: UIViewController {
         
         self.scrollDetailApod.delegate = self
         
-        ManagerAPOD.shared.getImageAPOD(fechaInicial: "2020-01-01", fechaFinal: "2020-01-10") { listApods in
+        
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        let dateCurrent = format.string(from: date)
+        
+        var dateComponent = DateComponents()
+        dateComponent.day = -8
+        
+        let pastDate = Calendar.current.date(byAdding: dateComponent, to: date)
+        let pastDateString = format.string(from: pastDate!)
+        
+        ManagerAPOD.shared.getImageAPOD(fechaInicial: pastDateString, fechaFinal: dateCurrent) { listApods in
             
             let deadlineTime = DispatchTime.now() + .seconds(1)
             DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
