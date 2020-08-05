@@ -9,5 +9,5 @@
 import Foundation
 
 class APODServices {
-    static let URLApod =  "https://api.nasa.gov/planetary/apod?api_key=2GbU1fguVerTerN7QvDBHbYabDK1mKicbXmFnCW0&start_date=start_date1&end_date=end_date1"
+    static let URLApod =  "https://api.nasa.gov/planetary/apod?api_key=n9B76lpjiEF9ARl4UPGmARaZq75zVMe6ht1wgxnL&start_date=start_date1&end_date=end_date1"
 }

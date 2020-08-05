@@ -12,7 +12,6 @@ import UIKit
 struct APODStruct: Codable {
     var date: String
     var explanation : String
-    var hdurl : String
     var title : String
     var url : String
 }

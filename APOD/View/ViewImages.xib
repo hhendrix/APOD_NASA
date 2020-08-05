@@ -22,38 +22,29 @@
                                 <constraint firstAttribute="height" constant="252" id="Ioq-pF-pSE"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8u6-UV-h9q">
-                            <rect key="frame" x="10" y="293" width="394" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzI-zn-oU5">
+                            <rect key="frame" x="15" y="264" width="61" height="23"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                            <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explicación" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvy-mU-U2V">
-                            <rect key="frame" x="10" y="331.5" width="394" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzI-zn-oU5">
-                            <rect key="frame" x="13" y="264" width="51.5" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="15" y="307" width="384" height="22.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="8u6-UV-h9q" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" constant="10" id="3Ws-04-Hg8"/>
-                        <constraint firstItem="Zvy-mU-U2V" firstAttribute="top" secondItem="8u6-UV-h9q" secondAttribute="bottom" constant="18" id="Cc7-zC-bT3"/>
                         <constraint firstItem="xTx-5W-T6P" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" id="Lvy-qR-xrg"/>
+                        <constraint firstItem="Zvy-mU-U2V" firstAttribute="top" secondItem="RzI-zn-oU5" secondAttribute="bottom" constant="20" id="No4-NZ-z3d"/>
+                        <constraint firstItem="Zvy-mU-U2V" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" constant="15" id="UdV-o0-Hyj"/>
                         <constraint firstItem="RzI-zn-oU5" firstAttribute="top" secondItem="xTx-5W-T6P" secondAttribute="bottom" constant="12" id="YWU-i3-M3z"/>
-                        <constraint firstAttribute="trailing" secondItem="8u6-UV-h9q" secondAttribute="trailing" constant="10" id="Yie-2N-koU"/>
-                        <constraint firstItem="RzI-zn-oU5" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" constant="13" id="a45-FR-8h8"/>
+                        <constraint firstItem="RzI-zn-oU5" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" constant="15" id="a45-FR-8h8"/>
                         <constraint firstItem="xTx-5W-T6P" firstAttribute="top" secondItem="zre-9p-spt" secondAttribute="top" id="ceF-Sn-pZJ"/>
-                        <constraint firstAttribute="trailing" secondItem="Zvy-mU-U2V" secondAttribute="trailing" constant="10" id="eqj-MT-7UR"/>
-                        <constraint firstItem="8u6-UV-h9q" firstAttribute="top" secondItem="RzI-zn-oU5" secondAttribute="bottom" constant="8" id="gA6-z0-pik"/>
+                        <constraint firstAttribute="trailing" secondItem="Zvy-mU-U2V" secondAttribute="trailing" constant="15" id="kn2-80-4D7"/>
                         <constraint firstAttribute="trailing" secondItem="xTx-5W-T6P" secondAttribute="trailing" id="lTo-HK-N6C"/>
-                        <constraint firstItem="Zvy-mU-U2V" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" constant="10" id="ytq-rz-wGq"/>
                     </constraints>
                 </view>
             </subviews>
@@ -70,7 +61,6 @@
                 <outlet property="dateCreationLabel" destination="RzI-zn-oU5" id="1Jm-5F-Eob"/>
                 <outlet property="explicationLabel" destination="Zvy-mU-U2V" id="GhC-Ch-hU0"/>
                 <outlet property="imageAPOD" destination="xTx-5W-T6P" id="yZb-4v-xxF"/>
-                <outlet property="titleLabel" destination="8u6-UV-h9q" id="MHC-zZ-FFH"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
         </view>

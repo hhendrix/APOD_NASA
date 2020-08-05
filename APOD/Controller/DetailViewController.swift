@@ -14,7 +14,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageDetail: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var titleMainLabel: UILabel!
+    @IBOutlet weak var viewTitle: UIView!
+    @IBOutlet weak var textViewDescription: UITextView!
     
+    @IBOutlet weak var activityIndicatorDetail: UIActivityIndicatorView!
     
     var dateSelected = ""
 
@@ -22,6 +26,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getDataSelected()
+        
+        self.activityIndicatorDetail.startAnimating()
     }
     
     
@@ -33,16 +39,29 @@ class DetailViewController: UIViewController {
                 DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
                     self.imageDetail.donwloadedFrom(link: apodDay.url)
                     self.imageDetail.contentMode = .scaleAspectFill
-                    self.dateLabel.text = apodDay.date
-                    self.descriptionLabel.text = apodDay.explanation
-                    self.title = apodDay.title
                     
+                    let dateFormatterGet = DateFormatter()
+                    dateFormatterGet.dateFormat = "yyyy-MM-dd"
+                    let dateFormatterPrint = DateFormatter()
+                    dateFormatterPrint.dateFormat = "MMM d, yyyy"
+                    dateFormatterPrint.locale = Locale(identifier: "es_CO")
+                    if let date = dateFormatterGet.date(from: String(describing: apodDay.date)) {
+                        self.dateLabel.text =  "Publication Date:   \(dateFormatterPrint.string(from: date))"
+                    }
+                    
+                    self.textViewDescription.text = apodDay.explanation
+                    self.titleMainLabel.text = apodDay.title
+                    
+                    self.activityIndicatorDetail.stopAnimating()
+                    self.activityIndicatorDetail.isHidden = true
                 }
             }
         }
         
     }
     
+    
+
 
     /*
     // MARK: - Navigation

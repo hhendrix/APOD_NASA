@@ -12,14 +12,20 @@ class MainViewViewController: UIViewController {
     
     @IBOutlet weak var scrollDetailApod: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var viewTabBar: UIView!
+    @IBOutlet weak var labelTitleMain: UILabel!
+    @IBOutlet weak var activityIndicatorMain: UIActivityIndicatorView!
+    
+    
+    var listApods:[APODStruct]?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //LoadingNasa.shared.showLoader()
-        let managerImage = ManagerAPOD()
-        //managerImage.getImageAPOD()
+        self.activityIndicatorMain.startAnimating()
+        self.pageControl.numberOfPages = 0
+        
         let widthView = self.view.frame.width
         
         self.scrollDetailApod.delegate = self
@@ -31,12 +37,14 @@ class MainViewViewController: UIViewController {
         let dateCurrent = format.string(from: date)
         
         var dateComponent = DateComponents()
-        dateComponent.day = -8
+        dateComponent.day = -7
         
         let pastDate = Calendar.current.date(byAdding: dateComponent, to: date)
         let pastDateString = format.string(from: pastDate!)
         
         ManagerAPOD.shared.getImageAPOD(fechaInicial: pastDateString, fechaFinal: dateCurrent) { listApods in
+            
+            self.listApods = listApods
             
             let deadlineTime = DispatchTime.now() + .seconds(1)
             DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
@@ -52,11 +60,15 @@ class MainViewViewController: UIViewController {
                 self.pageControl.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
                 self.pageControl.addTarget(self, action: #selector(self.pageControlSelectionAction(_:)), for: .touchUpInside)
                 self.pageControl.numberOfPages = listApods.count
+                
+                self.labelTitleMain.text = self.listApods![0].title
+                
+                self.activityIndicatorMain.stopAnimating()
+                self.activityIndicatorMain.isHidden = true
             }
             
+            
         }
-        
-        
         
         // Do any additional setup after loading the view.
     }
@@ -75,14 +87,19 @@ class MainViewViewController: UIViewController {
                 controlSlide.imageAPOD.donwloadedFrom(link: urlImage)
                 controlSlide.imageAPOD.contentMode = .scaleAspectFill
                 
+                let dateFormatterGet = DateFormatter()
+                dateFormatterGet.dateFormat = "yyyy-MM-dd"
+                let dateFormatterPrint = DateFormatter()
+                dateFormatterPrint.dateFormat = "MMM d, yyyy"
+                dateFormatterPrint.locale = Locale(identifier: "es_CO")
+                if let date = dateFormatterGet.date(from: String(describing: slide.date)) {
+                    controlSlide.dateCreationLabel.text = "Publication Date:   \(dateFormatterPrint.string(from: date))"
+                }
                 
-                controlSlide.dateCreationLabel.text = slide.date
-                controlSlide.titleLabel.text = slide.title
-                controlSlide.titleLabel.sizeToFit()
                 controlSlide.explicationLabel.text = slide.explanation
                 controlSlide.explicationLabel.sizeToFit()
                 
-                let heightControl = 380 + controlSlide.titleLabel.frame.height  + controlSlide.explicationLabel.frame.height
+                let heightControl = 380   + controlSlide.explicationLabel.frame.height
                 
                 if heightControl >= valueMaxHeight {
                     valueMaxHeight = heightControl
@@ -124,6 +141,7 @@ class MainViewViewController: UIViewController {
         let slideToX: CGFloat = CGFloat(index) * pageWidth
         
         scrollDetailApod.scrollRectToVisible(CGRect(x: slideToX, y:0, width:pageWidth, height:scrollDetailApod.frame.height), animated: true)
+        self.labelTitleMain.text = self.listApods![index].title
     }
     
     
@@ -131,16 +149,6 @@ class MainViewViewController: UIViewController {
         scrollToIndex(index: sender.currentPage )
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 
@@ -150,6 +158,7 @@ extension MainViewViewController : UIScrollViewDelegate {
         let currentPage:CGFloat = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1
         //let currentPage:CGFloat = floor(5000)+1
         pageControl.currentPage = Int(currentPage)
+        self.labelTitleMain.text = self.listApods![Int(currentPage)].title
         //newsManager.shared.indexSelectNews = Int(currentPage)
     }
 }

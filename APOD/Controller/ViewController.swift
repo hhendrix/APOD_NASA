@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import WebKit
+
 
 class ViewController: UIViewController {
     
@@ -18,10 +20,12 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var selectedDay: UIButton!
+    @IBOutlet weak var wkWeb: WKWebView!
     
     
     var dataDetail:APODStruct?
     private var dateCurrent = ""
+    private  var  dateDalected:Date?
     
     
     override func viewDidLoad() {
@@ -73,7 +77,8 @@ class ViewController: UIViewController {
         let date = Date()
         let format = DateFormatter()
         format.dateFormat = "yyyy-MM-dd"
-        self.dateCurrent = format.string(from: date)
+        //self.dateCurrent = format.string(from: date)
+        self.dateCurrent = "2020-08-04"
     }
     
     
@@ -84,12 +89,10 @@ class ViewController: UIViewController {
     
     @objc func datePickerValueChange(sender: UIDatePicker){
         let format = DateFormatter()
-        format.dateFormat = "yyyy-MM-dd"
+        format.dateFormat = "MMM d, yyyy"
         let formattedDate = format.string(from: sender.date)
-        
         self.labelDate.text = formattedDate
-        
-        
+        self.dateDalected = sender.date
     }
     
     @objc func selectImageForOpenAPod(){
@@ -105,8 +108,15 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailSegue" {
             if let destinationVC = segue.destination as? DetailViewController {
+                
+                
+                
+                
                 if self.labelDate.text != "" {
-                    destinationVC.dateSelected = self.labelDate.text!
+                    let date = Date()
+                    let format = DateFormatter()
+                    format.dateFormat = "yyyy-MM-dd"
+                    destinationVC.dateSelected = format.string(from:self.dateDalected!)
                 }
                 else{
                     destinationVC.dateSelected = self.dateCurrent
