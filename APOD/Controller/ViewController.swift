@@ -77,8 +77,8 @@ class ViewController: UIViewController {
         let date = Date()
         let format = DateFormatter()
         format.dateFormat = "yyyy-MM-dd"
-        //self.dateCurrent = format.string(from: date)
-        self.dateCurrent = "2020-08-04"
+        self.dateCurrent = format.string(from: date)
+        //self.dateCurrent = "2020-08-04"
     }
     
     
@@ -108,12 +108,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailSegue" {
             if let destinationVC = segue.destination as? DetailViewController {
-                
-                
-                
-                
                 if self.labelDate.text != "" {
-                    let date = Date()
                     let format = DateFormatter()
                     format.dateFormat = "yyyy-MM-dd"
                     destinationVC.dateSelected = format.string(from:self.dateDalected!)
@@ -124,10 +119,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    
-    
-    
     
 }
 

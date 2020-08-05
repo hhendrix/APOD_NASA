@@ -66,11 +66,7 @@ class MainViewViewController: UIViewController {
                 self.activityIndicatorMain.stopAnimating()
                 self.activityIndicatorMain.isHidden = true
             }
-            
-            
         }
-        
-        // Do any additional setup after loading the view.
     }
     
     
@@ -79,10 +75,7 @@ class MainViewViewController: UIViewController {
         var slideList = [DetailApods]()
         var valueMaxHeight = CGFloat(435)
         for slide in listAPODSData {
-            
-            
             if let controlSlide:DetailApods = Bundle.main.loadNibNamed("ViewImages", owner: self, options: nil)?.first as? DetailApods {
-                
                 let urlImage = slide.url
                 controlSlide.imageAPOD.donwloadedFrom(link: urlImage)
                 controlSlide.imageAPOD.contentMode = .scaleAspectFill
@@ -129,9 +122,6 @@ class MainViewViewController: UIViewController {
         guard let pageControl: UIPageControl = sender as? UIPageControl else {
             return
         }
-        
-        //newsManager.shared.indexSelectNews = pageControl.currentPage
-        
         scrollToIndex(index: pageControl.currentPage)
     }
     
@@ -156,9 +146,7 @@ extension MainViewViewController : UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageWidth:CGFloat = scrollView.frame.width
         let currentPage:CGFloat = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1
-        //let currentPage:CGFloat = floor(5000)+1
         pageControl.currentPage = Int(currentPage)
         self.labelTitleMain.text = self.listApods![Int(currentPage)].title
-        //newsManager.shared.indexSelectNews = Int(currentPage)
     }
 }

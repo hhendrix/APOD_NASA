@@ -37,12 +37,7 @@ class NetworkingClass : AsyncOperation {
                 self.state = .Finished
             }
         }
-        
-        
-        
     }
-    
-    
     
     func network(url:URL, callback: @escaping (Data) -> Void){
         print("Open Conection")
