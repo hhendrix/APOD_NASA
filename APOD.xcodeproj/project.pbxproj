@@ -13,6 +13,18 @@
 		1A1789A924D49AE90059B4AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1789A724D49AE90059B4AC /* Main.storyboard */; };
 		1A1789AB24D49AE90059B4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1789AA24D49AE90059B4AC /* Assets.xcassets */; };
 		1A1789AE24D49AE90059B4AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1789AC24D49AE90059B4AC /* LaunchScreen.storyboard */; };
+		1A719B2024D9A22400FA025B /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B1F24D9A22400FA025B /* AsyncOperation.swift */; };
+		1A719B2524D9A62F00FA025B /* APODServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B2424D9A62F00FA025B /* APODServices.swift */; };
+		1A719B2724D9A79C00FA025B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B2624D9A79C00FA025B /* Extensions.swift */; };
+		1A719B2924D9A7B000FA025B /* NetworkingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B2824D9A7B000FA025B /* NetworkingClass.swift */; };
+		1A719B2B24D9AEDF00FA025B /* APODStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B2A24D9AEDF00FA025B /* APODStruct.swift */; };
+		1A719B2E24D9B32C00FA025B /* ManagerAPOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B2D24D9B32C00FA025B /* ManagerAPOD.swift */; };
+		1A719B3024D9D41B00FA025B /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B2F24D9D41B00FA025B /* Conversions.swift */; };
+		1A719B3224DA183100FA025B /* LoadingNasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B3124DA183100FA025B /* LoadingNasa.swift */; };
+		1A719B3424DA26D000FA025B /* MainViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B3324DA26D000FA025B /* MainViewViewController.swift */; };
+		1A719B3624DA2C8C00FA025B /* ViewImages.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A719B3524DA2C8C00FA025B /* ViewImages.xib */; };
+		1A719B3924DA2ED100FA025B /* DetailApods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B3824DA2ED100FA025B /* DetailApods.swift */; };
+		1A719B3B24DA552E00FA025B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A719B3A24DA552E00FA025B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		1A1789AA24D49AE90059B4AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A1789AD24D49AE90059B4AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1789AF24D49AE90059B4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A719B1F24D9A22400FA025B /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		1A719B2424D9A62F00FA025B /* APODServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODServices.swift; sourceTree = "<group>"; };
+		1A719B2624D9A79C00FA025B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1A719B2824D9A7B000FA025B /* NetworkingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClass.swift; sourceTree = "<group>"; };
+		1A719B2A24D9AEDF00FA025B /* APODStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODStruct.swift; sourceTree = "<group>"; };
+		1A719B2D24D9B32C00FA025B /* ManagerAPOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAPOD.swift; sourceTree = "<group>"; };
+		1A719B2F24D9D41B00FA025B /* Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversions.swift; sourceTree = "<group>"; };
+		1A719B3124DA183100FA025B /* LoadingNasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingNasa.swift; sourceTree = "<group>"; };
+		1A719B3324DA26D000FA025B /* MainViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewController.swift; sourceTree = "<group>"; };
+		1A719B3524DA2C8C00FA025B /* ViewImages.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewImages.xib; sourceTree = "<group>"; };
+		1A719B3824DA2ED100FA025B /* DetailApods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailApods.swift; sourceTree = "<group>"; };
+		1A719B3A24DA552E00FA025B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +80,91 @@
 		1A1789A024D49AE90059B4AC /* APOD */ = {
 			isa = PBXGroup;
 			children = (
+				1A719B1E24D9A20B00FA025B /* Sources */,
+				1A1789B824D4A8370059B4AC /* Suporting Files */,
+				1A1789B724D4A7FF0059B4AC /* View */,
+				1A1789B624D4A7F40059B4AC /* Controller */,
+				1A1789B524D49DDF0059B4AC /* Model */,
 				1A1789A124D49AE90059B4AC /* AppDelegate.swift */,
 				1A1789A324D49AE90059B4AC /* SceneDelegate.swift */,
-				1A1789A524D49AE90059B4AC /* ViewController.swift */,
-				1A1789A724D49AE90059B4AC /* Main.storyboard */,
 				1A1789AA24D49AE90059B4AC /* Assets.xcassets */,
-				1A1789AC24D49AE90059B4AC /* LaunchScreen.storyboard */,
-				1A1789AF24D49AE90059B4AC /* Info.plist */,
 			);
 			path = APOD;
+			sourceTree = "<group>";
+		};
+		1A1789B524D49DDF0059B4AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A719B2A24D9AEDF00FA025B /* APODStruct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A1789B624D4A7F40059B4AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A1789A524D49AE90059B4AC /* ViewController.swift */,
+				1A719B3324DA26D000FA025B /* MainViewViewController.swift */,
+				1A719B3A24DA552E00FA025B /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A1789B724D4A7FF0059B4AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A1789A724D49AE90059B4AC /* Main.storyboard */,
+				1A1789AC24D49AE90059B4AC /* LaunchScreen.storyboard */,
+				1A719B3524DA2C8C00FA025B /* ViewImages.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A1789B824D4A8370059B4AC /* Suporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A1789AF24D49AE90059B4AC /* Info.plist */,
+			);
+			path = "Suporting Files";
+			sourceTree = "<group>";
+		};
+		1A719B1E24D9A20B00FA025B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1A719B3724DA2EAD00FA025B /* Views */,
+				1A719B2C24D9B31500FA025B /* manager */,
+				1A719B2124D9A57300FA025B /* utilities */,
+				1A719B1F24D9A22400FA025B /* AsyncOperation.swift */,
+				1A719B2824D9A7B000FA025B /* NetworkingClass.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1A719B2124D9A57300FA025B /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1A719B2424D9A62F00FA025B /* APODServices.swift */,
+				1A719B2624D9A79C00FA025B /* Extensions.swift */,
+				1A719B2F24D9D41B00FA025B /* Conversions.swift */,
+				1A719B3124DA183100FA025B /* LoadingNasa.swift */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		1A719B2C24D9B31500FA025B /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				1A719B2D24D9B32C00FA025B /* ManagerAPOD.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		1A719B3724DA2EAD00FA025B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A719B3824DA2ED100FA025B /* DetailApods.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A719B3624DA2C8C00FA025B /* ViewImages.xib in Resources */,
 				1A1789AE24D49AE90059B4AC /* LaunchScreen.storyboard in Resources */,
 				1A1789AB24D49AE90059B4AC /* Assets.xcassets in Resources */,
 				1A1789A924D49AE90059B4AC /* Main.storyboard in Resources */,
@@ -138,9 +239,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A719B3924DA2ED100FA025B /* DetailApods.swift in Sources */,
+				1A719B2924D9A7B000FA025B /* NetworkingClass.swift in Sources */,
 				1A1789A624D49AE90059B4AC /* ViewController.swift in Sources */,
+				1A719B2724D9A79C00FA025B /* Extensions.swift in Sources */,
+				1A719B3224DA183100FA025B /* LoadingNasa.swift in Sources */,
 				1A1789A224D49AE90059B4AC /* AppDelegate.swift in Sources */,
+				1A719B2B24D9AEDF00FA025B /* APODStruct.swift in Sources */,
+				1A719B3024D9D41B00FA025B /* Conversions.swift in Sources */,
+				1A719B2524D9A62F00FA025B /* APODServices.swift in Sources */,
+				1A719B2024D9A22400FA025B /* AsyncOperation.swift in Sources */,
 				1A1789A424D49AE90059B4AC /* SceneDelegate.swift in Sources */,
+				1A719B3424DA26D000FA025B /* MainViewViewController.swift in Sources */,
+				1A719B2E24D9B32C00FA025B /* ManagerAPOD.swift in Sources */,
+				1A719B3B24DA552E00FA025B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INFOPLIST_FILE[sdk=*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -286,7 +399,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S628SS6YKF;
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = "APOD/Suporting Files/info.plist";
+				"INFOPLIST_FILE[sdk=*]" = "APOD/Suporting Files/info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +419,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S628SS6YKF;
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = "APOD/Suporting Files/info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

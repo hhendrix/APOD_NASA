@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DetailApods" customModule="APOD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zre-9p-spt">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xTx-5W-T6P">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="252"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="252" id="Ioq-pF-pSE"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8u6-UV-h9q">
+                            <rect key="frame" x="10" y="293" width="394" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explicación" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvy-mU-U2V">
+                            <rect key="frame" x="10" y="331.5" width="394" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzI-zn-oU5">
+                            <rect key="frame" x="13" y="264" width="51.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="8u6-UV-h9q" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" constant="10" id="3Ws-04-Hg8"/>
+                        <constraint firstItem="Zvy-mU-U2V" firstAttribute="top" secondItem="8u6-UV-h9q" secondAttribute="bottom" constant="18" id="Cc7-zC-bT3"/>
+                        <constraint firstItem="xTx-5W-T6P" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" id="Lvy-qR-xrg"/>
+                        <constraint firstItem="RzI-zn-oU5" firstAttribute="top" secondItem="xTx-5W-T6P" secondAttribute="bottom" constant="12" id="YWU-i3-M3z"/>
+                        <constraint firstAttribute="trailing" secondItem="8u6-UV-h9q" secondAttribute="trailing" constant="10" id="Yie-2N-koU"/>
+                        <constraint firstItem="RzI-zn-oU5" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" constant="13" id="a45-FR-8h8"/>
+                        <constraint firstItem="xTx-5W-T6P" firstAttribute="top" secondItem="zre-9p-spt" secondAttribute="top" id="ceF-Sn-pZJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Zvy-mU-U2V" secondAttribute="trailing" constant="10" id="eqj-MT-7UR"/>
+                        <constraint firstItem="8u6-UV-h9q" firstAttribute="top" secondItem="RzI-zn-oU5" secondAttribute="bottom" constant="8" id="gA6-z0-pik"/>
+                        <constraint firstAttribute="trailing" secondItem="xTx-5W-T6P" secondAttribute="trailing" id="lTo-HK-N6C"/>
+                        <constraint firstItem="Zvy-mU-U2V" firstAttribute="leading" secondItem="zre-9p-spt" secondAttribute="leading" constant="10" id="ytq-rz-wGq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="zre-9p-spt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CS6-jX-DqP"/>
+                <constraint firstItem="zre-9p-spt" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bja-DR-bWf"/>
+                <constraint firstItem="zre-9p-spt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mTu-j5-pGA"/>
+                <constraint firstItem="zre-9p-spt" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="z8D-7T-oXb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="dateCreationLabel" destination="RzI-zn-oU5" id="1Jm-5F-Eob"/>
+                <outlet property="explicationLabel" destination="Zvy-mU-U2V" id="GhC-Ch-hU0"/>
+                <outlet property="imageAPOD" destination="xTx-5W-T6P" id="yZb-4v-xxF"/>
+                <outlet property="titleLabel" destination="8u6-UV-h9q" id="MHC-zZ-FFH"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
+        </view>
+    </objects>
+</document>
